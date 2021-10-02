@@ -1,54 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style2.scss" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//fonts.googleapis.com/css?family=Open+Sans"
+    />
     <title>LogIn / SinUp</title>
-</head>
-<body>
-    <div id="amazon-root">
-        
+  </head>
+  <body >
+      <h1 class="text-center">Login form</h1>
+    <form class="mx-auto mt-5" style="width: 50%; border: 1px solid black; padding: 2rem;">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+   <h4 class="m-4" style="text-align: center;">or</h4>
+<div style="text-align: center;">
+    <button class="btngoogle mx-auto" onclick="loginMe()">
+        <div class="google-btn">
+          <div class="google-icon-wrapper">
+            <img
+              class="google-icon"
+              src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+            />
+            &nbsp;<span class="btn-text"><b>Sign in with google</b></span>
+          </div>
+        </div>
+      </button>
+</div>
+    
     </div>
-    <div class="main">
 
-    <h1 style="text-align: center;">Login With google</h1>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase.js"></script>
 
-    <div >
-       <input class="username" placeholder="username" >
-    </div>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>
 
-    <div>
-<input class="password" placeholder="password">
-    </div>
-
-    <h4 style="text-align: center;">or login below</h4>
-
-<button class="btngoogle" onclick="loginMe()">login with google</button>
-    </div>
-
-
-<script src="https://www.gstatic.com/firebasejs/7.16.0/firebase.js"></script>
-
-<script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>
-
-<script>
-  var firebaseConfig = {
-    apiKey: "AIzaSyB505g7ENsCJpOu-9wis4XaWp813em6XMA",
-    authDomain: "authlogin-2ec70.firebaseapp.com",
-    databaseURL: "https://authlogin-2ec70.firebaseio.com",
-    projectId: "authlogin-2ec70",
-    storageBucket: "authlogin-2ec70.appspot.com",
-    messagingSenderId: "629150258327",
-    appId: "1:629150258327:web:b7c46801bafa10fed505d2",
-    measurementId: "G-15MKJ7XL1B"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-</script>
-
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyB505g7ENsCJpOu-9wis4XaWp813em6XMA",
+        authDomain: "authlogin-2ec70.firebaseapp.com",
+        databaseURL: "https://authlogin-2ec70.firebaseio.com",
+        projectId: "authlogin-2ec70",
+        storageBucket: "authlogin-2ec70.appspot.com",
+        messagingSenderId: "629150258327",
+        appId: "1:629150258327:web:b7c46801bafa10fed505d2",
+        measurementId: "G-15MKJ7XL1B",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
 
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
